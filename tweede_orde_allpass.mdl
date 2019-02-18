@@ -1,12 +1,12 @@
 Model {
-  Name			  "opdracht2"
+  Name			  "tweede_orde_allpass"
   Version		  6.6
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.21"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -38,14 +38,14 @@ Model {
   StatusBar		  on
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
-  Created		  "Wed Feb 13 11:35:43 2019"
+  Created		  "Mon Feb 18 15:07:42 2019"
   Creator		  "student"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 18 15:42:16 2019"
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Mon Feb 18 15:34:30 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -598,17 +598,6 @@ Model {
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      Switch
-      Criteria		      "u2 >= Threshold"
-      Threshold		      "0"
-      InputSameDT	      on
-      OutDataTypeMode	      "Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      ZeroCross		      on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      UnitDelay
       X0		      "0"
       SampleTime	      "1"
@@ -635,8 +624,8 @@ Model {
     FontAngle		    "normal"
   }
   System {
-    Name		    "opdracht2"
-    Location		    [2, 74, 1678, 999]
+    Name		    "tweede_orde_allpass"
+    Location		    [818, 159, 1643, 945]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -652,17 +641,17 @@ Model {
     ReportName		    "simulink-default.rpt"
     Block {
       BlockType		      SubSystem
-      Name		      "1st orderAllpass"
-      Ports		      [2, 1]
-      Position		      [190, 95, 230, 155]
+      Name		      "AP_2st_order"
+      Ports		      [3, 1]
+      Position		      [380, 184, 420, 246]
       MinAlgLoopOccurrences   off
       RTWSystemCode	      "Auto"
       FunctionWithSeparateData off
       MaskHideContents	      off
       System {
-	Name			"1st orderAllpass"
-	Location		[582, 278, 1202, 600]
-	Open			off
+	Name			"AP_2st_order"
+	Location		[819, 565, 1557, 931]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -676,29 +665,45 @@ Model {
 	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
-	  Name			  "In1"
-	  Position		  [145, 25, 175, 40]
-	  Orientation		  "down"
+	  Name			  "beta"
+	  Position		  [480, 90, 510, 104]
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Inport
-	  Name			  "In2"
-	  Position		  [25, 128, 55, 142]
+	  Name			  "alfa"
+	  Position		  [140, 105, 170, 119]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
 	Block {
+	  BlockType		  Inport
+	  Name			  "source"
+	  Position		  [25, 150, 55, 164]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
 	  BlockType		  Constant
-	  Name			  "Constant"
-	  Position		  [140, 265, 170, 295]
+	  Name			  "Constant3"
+	  Position		  [540, 175, 570, 205]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Value			  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [195, 190, 225, 220]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
 	  Value			  "-1"
 	}
 	Block {
 	  BlockType		  Product
 	  Name			  "Product"
 	  Ports			  [2, 1]
-	  Position		  [180, 77, 210, 108]
+	  Position		  [205, 57, 235, 88]
 	  CollapseMode		  "All dimensions"
 	  InputSameDT		  off
 	  OutDataTypeMode	  "Inherit via internal rule"
@@ -708,7 +713,9 @@ Model {
 	  BlockType		  Product
 	  Name			  "Product1"
 	  Ports			  [2, 1]
-	  Position		  [200, 212, 230, 243]
+	  Position		  [160, 222, 190, 253]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
 	  CollapseMode		  "All dimensions"
 	  InputSameDT		  off
 	  OutDataTypeMode	  "Inherit via internal rule"
@@ -718,9 +725,18 @@ Model {
 	  BlockType		  Product
 	  Name			  "Product2"
 	  Ports			  [2, 1]
-	  Position		  [430, 207, 460, 238]
+	  Position		  [535, 112, 565, 143]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [490, 202, 520, 233]
 	  Orientation		  "left"
-	  NamePlacement		  "alternate"
 	  CollapseMode		  "All dimensions"
 	  InputSameDT		  off
 	  OutDataTypeMode	  "Inherit via internal rule"
@@ -729,11 +745,79 @@ Model {
 	Block {
 	  BlockType		  Sum
 	  Name			  "Sum"
-	  Ports			  [3, 1]
-	  Position		  [360, 90, 380, 110]
+	  Ports			  [2, 1]
+	  Position		  [320, 125, 340, 145]
 	  ShowName		  off
 	  IconShape		  "round"
-	  Inputs		  "|+++"
+	  Inputs		  "|++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [90, 145, 110, 165]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1]
+	  Position		  [95, 305, 115, 325]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [2, 1]
+	  Position		  [420, 125, 440, 145]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  Ports			  [2, 1]
+	  Position		  [620, 95, 640, 115]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum5"
+	  Ports			  [2, 1]
+	  Position		  [430, 275, 450, 295]
+	  Orientation		  "left"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
 	  CollapseMode		  "All dimensions"
 	  InputSameDT		  off
 	  OutDataTypeMode	  "Inherit via internal rule"
@@ -742,183 +826,201 @@ Model {
 	Block {
 	  BlockType		  UnitDelay
 	  Name			  "Unit Delay"
-	  Position		  [105, 203, 140, 237]
+	  Position		  [630, 268, 665, 302]
+	  Orientation		  "left"
 	}
 	Block {
 	  BlockType		  UnitDelay
 	  Name			  "Unit Delay1"
-	  Position		  [495, 194, 530, 226]
+	  Position		  [270, 283, 305, 317]
 	  Orientation		  "left"
-	  NamePlacement		  "alternate"
 	}
 	Block {
 	  BlockType		  Outport
 	  Name			  "Out1"
-	  Position		  [565, 103, 595, 117]
+	  Position		  [40, 310, 70, 324]
+	  Orientation		  "left"
 	  IconDisplay		  "Port number"
-	  BusOutputAsStruct	  off
 	}
 	Line {
-	  SrcBlock		  "Product"
+	  SrcBlock		  "Sum1"
 	  SrcPort		  1
-	  Points		  [65, 0; 0, -7]
-	  DstBlock		  "Sum"
-	  DstPort		  1
+	  Points		  [75, 0]
+	  DstBlock		  "Product"
+	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "Product1"
 	  SrcPort		  1
-	  Points		  [114, 0]
-	  DstBlock		  "Sum"
+	  Points		  [-55, 0]
+	  DstBlock		  "Sum1"
 	  DstPort		  2
 	}
 	Line {
-	  SrcBlock		  "In1"
+	  SrcBlock		  "Product"
 	  SrcPort		  1
-	  Points		  [0, 15]
+	  Points		  [-10, 0; 0, 75; 15, 0]
 	  Branch {
-	    Points		    [315, 0]
-	    DstBlock		    "Product2"
+	    Points		    [0, 35; 20, 0; 0, -25]
+	    DstBlock		    "Sum"
 	    DstPort		    2
 	  }
 	  Branch {
-	    Points		    [0, 25]
-	    DstBlock		    "Product"
+	    Points		    [-10, 0; 0, 115; -105, 0]
+	    DstBlock		    "Sum2"
 	    DstPort		    1
 	  }
-	}
-	Line {
-	  SrcBlock		  "Unit Delay"
-	  SrcPort		  1
-	  DstBlock		  "Product1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant"
-	  SrcPort		  1
-	  Points		  [5, 0; 0, -45]
-	  DstBlock		  "Product1"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Unit Delay1"
-	  SrcPort		  1
-	  Points		  [-5, 0; 0, 5]
-	  DstBlock		  "Product2"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Product2"
-	  SrcPort		  1
-	  Points		  [-55, 0]
-	  DstBlock		  "Sum"
-	  DstPort		  3
 	}
 	Line {
 	  SrcBlock		  "Sum"
 	  SrcPort		  1
-	  Points		  [85, 0; 0, 10; 75, 0]
+	  Points		  [25, 0]
 	  Branch {
-	    DstBlock		    "Unit Delay1"
+	    DstBlock		    "Sum3"
 	    DstPort		    1
 	  }
 	  Branch {
-	    DstBlock		    "Out1"
+	    Points		    [0, -105; 220, 0; 0, 75]
+	    DstBlock		    "Sum4"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  SrcBlock		  "In2"
+	  SrcBlock		  "Sum3"
 	  SrcPort		  1
-	  Points		  [15, 0]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0]
 	  Branch {
-	    Points		    [30, 0; 0, -35]
-	    DstBlock		    "Product"
+	    DstBlock		    "Sum4"
 	    DstPort		    2
 	  }
 	  Branch {
-	    Points		    [0, 85]
-	    DstBlock		    "Unit Delay"
+	    Points		    [0, 105; -20, 0; 0, 50]
+	    DstBlock		    "Sum5"
 	    DstPort		    1
 	  }
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, 180]
+	  DstBlock		  "Unit Delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  Points		  [-35, 0; 0, 5]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "Sum5"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [-55, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Product3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum5"
+	  SrcPort		  1
+	  Points		  [-50, 0; 0, 15]
+	  DstBlock		  "Unit Delay1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Unit Delay1"
+	  SrcPort		  1
+	  Points		  [0, 40; -65, 0]
+	  Branch {
+	    DstBlock		    "Sum2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [5, 0]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  Points		  [0, 5]
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "source"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Sum1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -110; 215, 0; 0, 90]
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "beta"
+	  SrcPort		  1
+	  Points		  [0, 25]
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "alfa"
+	  SrcPort		  1
+	  Points		  [0, -45]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
 	}
       }
     }
     Block {
       BlockType		      Constant
-      Name		      "Constant"
-      Position		      [100, 70, 130, 100]
-    }
-    Block {
-      BlockType		      Constant
       Name		      "Constant1"
-      Position		      [335, 145, 365, 175]
-      Orientation	      "left"
+      Position		      [95, 15, 125, 45]
       NamePlacement	      "alternate"
-      Value		      "-1"
     }
     Block {
       BlockType		      Constant
-      Name		      "Constant3"
-      Position		      [300, 85, 330, 115]
+      Name		      "Constant2"
+      Position		      [445, 15, 475, 45]
       NamePlacement	      "alternate"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "K"
-      Ports		      [1, 1]
-      Position		      [375, 80, 405, 110]
-      SourceBlock	      "simulink/Math\nOperations/Slider\nGain"
-      SourceType	      "Slider Gain"
-      ShowPortLabels	      "FromPortIcon"
-      SystemSampleTime	      "-1"
-      FunctionWithSeparateData off
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      low		      "0"
-      gain		      "1"
-      high		      "1"
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product"
-      Ports		      [2, 1]
-      Position		      [287, 180, 318, 210]
-      Orientation	      "down"
-      NamePlacement	      "alternate"
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product1"
-      Ports		      [2, 1]
-      Position		      [600, 27, 630, 58]
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product2"
-      Ports		      [2, 1]
-      Position		      [655, 307, 685, 338]
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Reference
       Name		      "Random\nSource"
       Ports		      [0, 1]
-      Position		      [15, 111, 50, 149]
+      Position		      [15, 176, 50, 214]
       UserDataPersistent      on
       UserData		      "DataTag0"
       SourceBlock	      "dspsrcs4/Random\nSource"
@@ -943,7 +1045,8 @@ Model {
       BlockType		      Reference
       Name		      "Spectrum\nAnalyzer"
       Ports		      [2]
-      Position		      [750, 132, 780, 163]
+      Position		      [15, 337, 45, 368]
+      Orientation	      "left"
       SourceBlock	      "simulink_extras/Additional\nSinks/Spectrum\nAna"
 "lyzer"
       SourceType	      "Spectrum Analyzer"
@@ -961,241 +1064,10 @@ Model {
       sampleT		      "1"
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "SubsystemHP"
-      Ports		      [1, 1]
-      Position		      [460, 50, 500, 110]
-      MinAlgLoopOccurrences   off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      MaskHideContents	      off
-      System {
-	Name			"SubsystemHP"
-	Location		[407, 89, 617, 216]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  Position		  [25, 50, 55, 65]
-	  Orientation		  "down"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant4"
-	  Position		  [50, 25, 80, 55]
-	  Value			  "0.5"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "Switch"
-	  Position		  [100, 70, 130, 100]
-	  Threshold		  "0.5"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  Position		  [155, 78, 185, 92]
-	  IconDisplay		  "Port number"
-	  BusOutputAsStruct	  off
-	}
-	Line {
-	  SrcBlock		  "Constant4"
-	  SrcPort		  1
-	  Points		  [-10, 0; 0, 35]
-	  DstBlock		  "Switch"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  Points		  [0, 15]
-	  Branch {
-	    Points		    [0, 10]
-	    DstBlock		    "Switch"
-	    DstPort		    3
-	  }
-	  Branch {
-	    DstBlock		    "Switch"
-	    DstPort		    2
-	  }
-	}
-	Line {
-	  SrcBlock		  "Switch"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "SubsystemLP"
-      Ports		      [1, 1]
-      Position		      [510, 210, 550, 270]
-      MinAlgLoopOccurrences   off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      MaskHideContents	      off
-      System {
-	Name			"SubsystemLP"
-	Location		[447, 199, 667, 351]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  Position		  [35, 73, 65, 87]
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant5"
-	  Position		  [25, 25, 55, 55]
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant6"
-	  Position		  [25, 95, 55, 125]
-	  Value			  "0.5"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum3"
-	  Ports			  [2, 1]
-	  Position		  [75, 35, 95, 55]
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "|+-"
-	  CollapseMode		  "All dimensions"
-	  InputSameDT		  off
-	  OutDataTypeMode	  "Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "Switch1"
-	  Position		  [110, 65, 140, 95]
-	  Threshold		  "0.5"
-	  InputSameDT		  off
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  Position		  [165, 73, 195, 87]
-	  IconDisplay		  "Port number"
-	  BusOutputAsStruct	  off
-	}
-	Line {
-	  SrcBlock		  "Sum3"
-	  SrcPort		  1
-	  Points		  [0, 25]
-	  DstBlock		  "Switch1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant5"
-	  SrcPort		  1
-	  DstBlock		  "Sum3"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant6"
-	  SrcPort		  1
-	  Points		  [15, 0; 0, -20]
-	  DstBlock		  "Switch1"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  Points		  [15, 0]
-	  Branch {
-	    DstBlock		    "Switch1"
-	    DstPort		    2
-	  }
-	  Branch {
-	    DstBlock		    "Sum3"
-	    DstPort		    2
-	  }
-	}
-	Line {
-	  SrcBlock		  "Switch1"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      Ports		      [2, 1]
-      Position		      [285, 45, 305, 65]
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum1"
-      Ports		      [2, 1]
-      Position		      [315, 235, 335, 255]
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum2"
-      Ports		      [2, 1]
-      Position		      [680, 170, 700, 190]
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
       BlockType		      Reference
-      Name		      "alfa"
+      Name		      "alpha"
       Ports		      [1, 1]
-      Position		      [140, 70, 170, 100]
+      Position		      [155, 15, 185, 45]
       SourceBlock	      "simulink/Math\nOperations/Slider\nGain"
       SourceType	      "Slider Gain"
       ShowPortLabels	      "FromPortIcon"
@@ -1207,149 +1079,75 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       low		      "0"
-      gain		      "0.5"
-      high		      "1"
+      gain		      "0.74654"
+      high		      "0.9"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "beta"
+      Ports		      [1, 1]
+      Position		      [495, 15, 525, 45]
+      SourceBlock	      "simulink/Math\nOperations/Slider\nGain"
+      SourceType	      "Slider Gain"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      low		      "-0.9"
+      gain		      "-0.68433"
+      high		      "0.9"
     }
     Line {
-      SrcBlock		      "alfa"
+      SrcBlock		      "alpha"
       SrcPort		      1
-      Points		      [5, 0; 0, 25]
-      DstBlock		      "1st orderAllpass"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "1st orderAllpass"
-      SrcPort		      1
-      Points		      [60, 0]
-      Branch {
-	DstBlock		"Sum"
-	DstPort			2
-      }
-      Branch {
-	DstBlock		"Product"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      DstBlock		      "alfa"
-      DstPort		      1
+      Points		      [20, 0; 0, 185]
+      DstBlock		      "AP_2st_order"
+      DstPort		      2
     }
     Line {
       SrcBlock		      "Constant1"
       SrcPort		      1
-      Points		      [-20, 0]
-      DstBlock		      "Product"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Product"
-      SrcPort		      1
-      Points		      [-5, 0]
-      DstBlock		      "Sum1"
+      DstBlock		      "alpha"
       DstPort		      1
     }
     Line {
       SrcBlock		      "Random\nSource"
       SrcPort		      1
-      Points		      [10, 0]
+      Points		      [20, 0; 0, 40]
       Branch {
-	Points			[15, 0]
-	Branch {
-	  Points		  [35, 0; 0, 10; 40, 0]
-	  Branch {
-	    DstBlock		    "1st orderAllpass"
-	    DstPort		    2
-	  }
-	  Branch {
-	    Points		    [0, 130]
-	    DstBlock		    "Sum1"
-	    DstPort		    2
-	  }
-	}
-	Branch {
-	  Points		  [0, -75]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	Points			[0, -115; 655, 0; 0, 125]
+	Points			[0, 110]
 	DstBlock		"Spectrum\nAnalyzer"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "Product1"
-      SrcPort		      1
-      Points		      [10, 0; 0, 135]
-      DstBlock		      "Sum2"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Product2"
-      SrcPort		      1
-      DstBlock		      "Sum2"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Sum2"
-      SrcPort		      1
-      Points		      [20, 0; 0, -25]
-      DstBlock		      "Spectrum\nAnalyzer"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      Points		      [25, 0; 0, -20]
-      DstBlock		      "Product1"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Constant3"
-      SrcPort		      1
-      Points		      [30, 0; 0, -5]
-      DstBlock		      "K"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "K"
-      SrcPort		      1
-      Points		      [10, 0]
-      Branch {
-	Points			[0, 145]
-	DstBlock		"SubsystemLP"
 	DstPort			1
       }
       Branch {
 	Labels			[0, 0]
-	Points			[25, 0]
-	DstBlock		"SubsystemHP"
-	DstPort			1
+	DstBlock		"AP_2st_order"
+	DstPort			3
       }
     }
     Line {
-      SrcBlock		      "SubsystemHP"
+      SrcBlock		      "beta"
       SrcPort		      1
-      Points		      [50, 0; 0, -30]
-      DstBlock		      "Product1"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Sum1"
-      SrcPort		      1
-      Points		      [110, 0; 0, 85]
-      DstBlock		      "Product2"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "SubsystemLP"
-      SrcPort		      1
-      Points		      [80, 0; 0, 75]
-      DstBlock		      "Product2"
+      Points		      [5, 0; 0, 130; -170, 0]
+      DstBlock		      "AP_2st_order"
       DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      DstBlock		      "beta"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AP_2st_order"
+      SrcPort		      1
+      Points		      [70, 0; 0, 135; -400, 0; 0, 10]
+      DstBlock		      "Spectrum\nAnalyzer"
+      DstPort		      2
     }
   }
 }
