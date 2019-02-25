@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.4"
+    ComputedModelVersion    "1.6"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -44,8 +44,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 13 11:36:11 2019"
-  ModelVersionFormat	  "1.%<AutoIncrement:4>"
+  LastModifiedDate	  "Mon Feb 25 16:07:12 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:6>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -642,7 +642,7 @@ Model {
   }
   System {
     Name		    "opdracht1"
-    Location		    [567, 149, 1348, 889]
+    Location		    [950, 211, 1731, 951]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -667,8 +667,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Allpass"
-	Location		[582, 278, 1202, 600]
-	Open			off
+	Location		[945, 587, 1565, 909]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -690,7 +690,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "In2"
-	  Position		  [25, 130, 55, 144]
+	  Position		  [25, 128, 55, 142]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
@@ -760,8 +760,9 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "Out1"
-	  Position		  [565, 105, 595, 119]
+	  Position		  [565, 103, 595, 117]
 	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
 	}
 	Line {
 	  SrcBlock		  "Product"
