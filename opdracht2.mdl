@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.15"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -44,8 +44,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 18 15:42:16 2019"
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Mon Mar 04 16:52:33 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:15>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -636,7 +636,7 @@ Model {
   }
   System {
     Name		    "opdracht2"
-    Location		    [2, 74, 1678, 999]
+    Location		    [180, 396, 1840, 1311]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -971,7 +971,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SubsystemHP"
-	Location		[407, 89, 617, 216]
+	Location		[236, 82, 891, 795]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -987,7 +987,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "In1"
-	  Position		  [25, 50, 55, 65]
+	  Position		  [15, 75, 45, 90]
 	  Orientation		  "down"
 	  IconDisplay		  "Port number"
 	}
@@ -1000,7 +1000,7 @@ Model {
 	Block {
 	  BlockType		  Switch
 	  Name			  "Switch"
-	  Position		  [100, 70, 130, 100]
+	  Position		  [115, 65, 145, 95]
 	  Threshold		  "0.5"
 	  InputSameDT		  off
 	  SaturateOnIntegerOverflow off
@@ -1008,27 +1008,28 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "Out1"
-	  Position		  [155, 78, 185, 92]
+	  Position		  [200, 78, 230, 92]
 	  IconDisplay		  "Port number"
 	  BusOutputAsStruct	  off
 	}
 	Line {
 	  SrcBlock		  "Constant4"
 	  SrcPort		  1
-	  Points		  [-10, 0; 0, 35]
+	  Points		  [10, 0; 0, 30]
 	  DstBlock		  "Switch"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "In1"
 	  SrcPort		  1
-	  Points		  [0, 15]
+	  Points		  [10, 0; 0, -10]
 	  Branch {
-	    Points		    [0, 10]
+	    Points		    [0, 5]
 	    DstBlock		    "Switch"
 	    DstPort		    3
 	  }
 	  Branch {
+	    Points		    [60, 0]
 	    DstBlock		    "Switch"
 	    DstPort		    2
 	  }
@@ -1036,6 +1037,7 @@ Model {
 	Line {
 	  SrcBlock		  "Switch"
 	  SrcPort		  1
+	  Points		  [0, 5]
 	  DstBlock		  "Out1"
 	  DstPort		  1
 	}
@@ -1052,7 +1054,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"SubsystemLP"
-	Location		[447, 199, 667, 351]
+	Location		[447, 199, 667, 631]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1079,7 +1081,7 @@ Model {
 	Block {
 	  BlockType		  Constant
 	  Name			  "Constant6"
-	  Position		  [25, 95, 55, 125]
+	  Position		  [20, 125, 50, 155]
 	  Value			  "0.5"
 	}
 	Block {
@@ -1126,7 +1128,7 @@ Model {
 	Line {
 	  SrcBlock		  "Constant6"
 	  SrcPort		  1
-	  Points		  [15, 0; 0, -20]
+	  Points		  [20, 0; 0, -50]
 	  DstBlock		  "Switch1"
 	  DstPort		  3
 	}
