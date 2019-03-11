@@ -1,0 +1,1359 @@
+Model {
+  Name			  "user_io"
+  Version		  6.4
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.1"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu May 19 11:20:47 2011"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "docent"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu May 19 11:21:33 2011"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StrictBusMsg		  "Warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		13
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeERTFirstTime     on
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "user_io"
+    Location		    [480, 93, 1060, 386]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "122"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "K"
+      Ports		      [2, 2]
+      Position		      [225, 82, 345, 158]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"K"
+	Location		[202, 82, 1598, 1026]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "up"
+	  Position		  [95, 238, 125, 252]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "down"
+	  Position		  [100, 388, 130, 402]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Convert"
+	  Ports			  [1, 1]
+	  Position		  [305, 245, 350, 275]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating req"
+"uire hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "8"
+	  bin_pt		  "6"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0 0 0 0 0 0 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "551,347,374,375"
+	  block_type		  "convert"
+	  block_version		  "8.2.02"
+	  sg_icon_stat		  "45,30,1,1,white,blue,0,0eb6e735"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');"
+"\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\npatch([15 10 17 10 15 2"
+"3 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20"
+" 26 21 15 9 4 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 30 30"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: beg"
+"in icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','C"
+"OMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Convert1"
+	  Ports			  [1, 1]
+	  Position		  [295, 395, 340, 425]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating req"
+"uire hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "8"
+	  bin_pt		  "6"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0 0 0 0 0 0 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "551,347,374,375"
+	  block_type		  "convert"
+	  block_version		  "8.2.02"
+	  sg_icon_stat		  "45,30,1,1,white,blue,0,0eb6e735"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');"
+"\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\npatch([15 10 17 10 15 2"
+"3 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20"
+" 26 21 15 9 4 10 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 0 45 45 0 ],[0 30 30"
+" 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: beg"
+"in icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','C"
+"OMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Counter1"
+	  Ports			  [2, 1]
+	  Position		  [510, 246, 560, 299]
+	  SourceBlock		  "xbsIndex_r4/Counter"
+	  SourceType		  "Xilinx Counter Block"
+	  infoedit		  "Hardware notes: Free running counters are t"
+"he least expensive in hardware.  A count limited counter is implemented by co"
+"mbining a counter with a comparator."
+	  cnt_type		  "Free Running"
+	  cnt_to		  "Inf"
+	  operation		  "Up/Down"
+	  start_count		  "8"
+	  cnt_by_val		  "1"
+	  arith_type		  "Unsigned"
+	  n_bits		  "4"
+	  bin_pt		  "0"
+	  load_pin		  "off"
+	  rst			  "off"
+	  en			  "on"
+	  explicit_period	  "off"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  use_behavioral_HDL	  "off"
+	  use_rpm		  "on"
+	  xl_use_area		  "off"
+	  xl_area		  "[2 4 0 4 0 0 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,20,356,630"
+	  block_type		  "counter"
+	  block_version		  "8.2.02"
+	  sg_icon_stat		  "50,53,2,1,white,blue,0,664a88f1"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');"
+"\npatch([0 50 50 0 ],[0 0 53 53 ],[0.77 0.82 0.91]);\npatch([11 3 15 3 11 24 "
+"28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[7 15 27 39 47 47 43 47 47 36 "
+"47 39 27 15 7 18 7 7 11 7 7 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 53 5"
+"3 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: be"
+"gin icon text');\ncolor('black');port_label('input',1,'up');\ncolor('black');"
+"port_label('input',2,'en');\ncolor('black');port_label('output',1,'out');\nfp"
+"rintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Logical"
+	  Ports			  [2, 1]
+	  Position		  [425, 365, 480, 425]
+	  SourceBlock		  "xbsIndex_r4/Logical"
+	  SourceType		  "Xilinx Logical Block Block"
+	  logical_function	  "OR"
+	  inputs		  "2"
+	  en			  "off"
+	  latency		  "0"
+	  precision		  "Full"
+	  arith_type		  "Unsigned"
+	  n_bits		  "16"
+	  bin_pt		  "0"
+	  align_bp		  "on"
+	  dbl_ovrd		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0,0,0,0,0,0,0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "logical"
+	  block_version		  "8.2.02"
+	  sg_icon_stat		  "55,60,2,1,white,blue,0,f4a65842"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');"
+"\npatch([0 55 55 0 ],[0 0 60 60 ],[0.77 0.82 0.91]);\npatch([13 4 17 4 13 28 "
+"32 36 52 40 28 19 32 19 28 40 52 36 32 28 13 ],[8 17 30 43 52 52 48 52 52 40 "
+"52 43 30 17 8 20 8 8 12 8 8 ],[0.98 0.96 0.92]);\nplot([0 0 55 55 0 ],[0 60 6"
+"0 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: be"
+"gin icon text');\ncolor('black');disp('\\newlineor\\newlinez^{-0}','texmode',"
+"'on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Moore State Machine"
+	  Ports			  [1, 2]
+	  Position		  [175, 213, 250, 277]
+	  LinkData {
+	    BlockName		    "Concat"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"concat\" s"
+"imulinkname=\"Concat\" >\n <initialization file=\"xlconcat_init.m\" />\n <ico"
+"n width=\"60\" bg_color=\"blue\" height=\"60\" wmark_color=\"white\" />\n <dl"
+"l entry_point=\"Concat_config\" name=\"Sysgen\" />\n <handlers enablement=\"x"
+"lmagicenablement\" />\n <libraries>\n  <library name=\"xbsIndex\" />\n  <libr"
+"ary name=\"xbsBasic\" />\n  <library name=\"xbsTypes\" />\n </libraries>\n <b"
+"lockgui label=\"Xilinx Bus Concatenator\" >\n  <editbox evaluate=\"false\" mu"
+"lti_line=\"true\" name=\"infoedit\" read_only=\"true\" default=\"Concatenates"
+" two or more inputs.  Output will be cast to an unsigned value with the binar"
+"y point at zero.\" />\n  <editbox ctype=\"Int\" evaluate=\"true\" name=\"num_"
+"inputs\" label=\"Number of inputs\" default=\"2\" />\n  <etch label=\"Simulat"
+"ion\" >\n   <checkbox evaluate=\"true\" name=\"dbl_ovrd\" label=\"Override wi"
+"th doubles\" default=\"off\" />\n  </etch>\n  <workspacevar ctype=\"String\" "
+"name=\"sysgen_root\" />\n  <workspacevar ctype=\"Int\" name=\"sim_engine\" />"
+"\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 40 40 0 ],[0 0 44 44 ],[0.77 0.82 0.91]);\npatch([10 3 12 3 1"
+"0 21 24 27 38 29 20 14 24 14 20 29 38 27 24 21 10 ],[6 13 22 31 38 38 35 38 3"
+"8 29 38 32 22 12 6 15 6 6 9 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 40 40 0 ],[0 "
+"44 44 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt"
+"}\\bf500','texmode','on');\ncolor('black');port_label('input',2,'\\fontsize{1"
+"1pt}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsi"
+"ze{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	      sg_icon_stat	      "40,44,2,1,white,blue,0,59d62d82"
+	    }
+	    BlockName		    "Next State ROM"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"sprom\" si"
+"mulinkname=\"ROM\" >\n <icon width=\"60\" bg_color=\"blue\" height=\"56\" wma"
+"rk_color=\"white\" />\n <dll entry_point=\"SPROM_config\" name=\"Sysgen\" />"
+"\n <handlers enablement=\"spromenablement\" />\n <libraries>\n  <library name"
+"=\"xbsIndex\" />\n  <library name=\"xbsControl\" />\n  <library name=\"xbsMem"
+"ory\" />\n </libraries>\n <blockgui label=\"Xilinx Single Port Read-Only Memo"
+"ry\" >\n  <tabpane>\n   <tab name=\"basictab\" label=\"Basic\" >\n    <editbo"
+"x ctype=\"Int\" evaluate=\"true\" name=\"depth\" label=\"Depth\" default=\"16"
+"\" />\n    <editbox ctype=\"DoubleVector\" evaluate=\"true\" name=\"initVecto"
+"r\" label=\"Initial value vector\" default=\"sin(pi*(0:15)/16)\" />\n    <rad"
+"iogroup ctype=\"Int\" evaluate=\"true\" name=\"distributed_mem\" label=\"Memo"
+"ry Type\" default=\"Block RAM\" >\n     <item value=\"Distributed memory\" la"
+"bel=\"Distributed memory\" />\n     <item value=\"Block RAM\" label=\"Block R"
+"AM\" />\n    </radiogroup>\n    <etch label=\"Optional Ports\" >\n     <check"
+"box ctype=\"Int\" evaluate=\"true\" name=\"rst\" label=\"Provide reset port f"
+"or output register\" default=\"off\" />\n     <editbox ctype=\"Double\" evalu"
+"ate=\"true\" name=\"init_reg\" label=\"Initial value for output register\" de"
+"fault=\"0\" />\n     <checkbox ctype=\"Int\" evaluate=\"true\" name=\"en\" la"
+"bel=\"Provide enable port\" default=\"off\" />\n    </etch>\n    <editbox cty"
+"pe=\"Int\" evaluate=\"true\" name=\"latency\" label=\"Latency\" default=\"1\""
+" />\n   </tab>\n   <tab name=\"typetab\" label=\"Output Type\" >\n    <etch l"
+"abel=\"Output Precision\" >\n     <radiogroup ctype=\"Int\" evaluate=\"true\""
+" name=\"arith_type\" label=\"Word type\" default=\"Signed  (2's comp)\" >\n  "
+"    <item value=\"Boolean\" label=\"Boolean\" />\n      <item value=\"Unsigne"
+"d\" label=\"Unsigned\" />\n      <item value=\"Signed  (2's comp)\" label=\"S"
+"igned  (2's comp)\" />\n     </radiogroup>\n     <editbox ctype=\"Int\" evalu"
+"ate=\"true\" name=\"n_bits\" label=\"Number of bits\" default=\"8\" />\n     "
+"<editbox ctype=\"Int\" evaluate=\"true\" name=\"bin_pt\" label=\"Binary point"
+"\" default=\"6\" />\n    </etch>\n   </tab>\n   <tab name=\"simtab\" label=\""
+"Advanced\" >\n    <etch label=\"Simulation\" >\n     <checkbox evaluate=\"tru"
+"e\" name=\"dbl_ovrd\" label=\"Override with doubles\" default=\"off\" />\n   "
+" </etch>\n   </tab>\n   <tab name=\"impltab\" label=\"Implementation\" >\n   "
+" <radiogroup ctype=\"Int\" evaluate=\"true\" name=\"optimize\" label=\"Optimi"
+"ze for\" default=\"Area\" >\n     <item value=\"Area\" label=\"Area\" />\n   "
+"  <item value=\"Speed\" label=\"Speed\" />\n    </radiogroup>\n    <etch labe"
+"l=\"Core Paramters\" >\n     <checkbox ctype=\"Int\" evaluate=\"true\" name="
+"\"use_rpm\" label=\"Use pre-defined core placement information\" default=\"on"
+"\" />\n    </etch>\n    <etch label=\"FPGA Area Estimation\" >\n     <checkbo"
+"x name=\"xl_use_area\" label=\"Define FPGA area for resource estimation\" def"
+"ault=\"off\" />\n     <editbox top_label=\"true\" name=\"xl_area\" label=\"FP"
+"GA area [slices, FFs, BRAMs, LUTs, IOBs, emb. mults, TBUFs]\" default=\"[0,0,"
+"0,0,0,0,0]\" />\n    </etch>\n   </tab>\n  </tabpane>\n  <workspacevar ctype="
+"\"Int\" name=\"bool\" />\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 65 65 0 ],[0 0 54 54 ],[0.77 0.82 0.91]);\npatch([18 9 22 9 1"
+"8 32 36 40 55 43 31 23 37 23 31 43 55 40 36 32 18 ],[6 15 28 41 50 50 46 50 5"
+"0 38 50 42 28 14 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0"
+" 54 54 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11p"
+"t}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsize"
+"{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	      sg_icon_stat	      "65,54,1,1,white,blue,0,a8b86474"
+	    }
+	    BlockName		    "Output ROM"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"sprom\" si"
+"mulinkname=\"ROM\" >\n <icon width=\"60\" bg_color=\"blue\" height=\"56\" wma"
+"rk_color=\"white\" />\n <dll entry_point=\"SPROM_config\" name=\"Sysgen\" />"
+"\n <handlers enablement=\"spromenablement\" />\n <libraries>\n  <library name"
+"=\"xbsIndex\" />\n  <library name=\"xbsControl\" />\n  <library name=\"xbsMem"
+"ory\" />\n </libraries>\n <blockgui label=\"Xilinx Single Port Read-Only Memo"
+"ry\" >\n  <tabpane>\n   <tab name=\"basictab\" label=\"Basic\" >\n    <editbo"
+"x ctype=\"Int\" evaluate=\"true\" name=\"depth\" label=\"Depth\" default=\"16"
+"\" />\n    <editbox ctype=\"DoubleVector\" evaluate=\"true\" name=\"initVecto"
+"r\" label=\"Initial value vector\" default=\"sin(pi*(0:15)/16)\" />\n    <rad"
+"iogroup ctype=\"Int\" evaluate=\"true\" name=\"distributed_mem\" label=\"Memo"
+"ry Type\" default=\"Block RAM\" >\n     <item value=\"Distributed memory\" la"
+"bel=\"Distributed memory\" />\n     <item value=\"Block RAM\" label=\"Block R"
+"AM\" />\n    </radiogroup>\n    <etch label=\"Optional Ports\" >\n     <check"
+"box ctype=\"Int\" evaluate=\"true\" name=\"rst\" label=\"Provide reset port f"
+"or output register\" default=\"off\" />\n     <editbox ctype=\"Double\" evalu"
+"ate=\"true\" name=\"init_reg\" label=\"Initial value for output register\" de"
+"fault=\"0\" />\n     <checkbox ctype=\"Int\" evaluate=\"true\" name=\"en\" la"
+"bel=\"Provide enable port\" default=\"off\" />\n    </etch>\n    <editbox cty"
+"pe=\"Int\" evaluate=\"true\" name=\"latency\" label=\"Latency\" default=\"1\""
+" />\n   </tab>\n   <tab name=\"typetab\" label=\"Output Type\" >\n    <etch l"
+"abel=\"Output Precision\" >\n     <radiogroup ctype=\"Int\" evaluate=\"true\""
+" name=\"arith_type\" label=\"Word type\" default=\"Signed  (2's comp)\" >\n  "
+"    <item value=\"Boolean\" label=\"Boolean\" />\n      <item value=\"Unsigne"
+"d\" label=\"Unsigned\" />\n      <item value=\"Signed  (2's comp)\" label=\"S"
+"igned  (2's comp)\" />\n     </radiogroup>\n     <editbox ctype=\"Int\" evalu"
+"ate=\"true\" name=\"n_bits\" label=\"Number of bits\" default=\"8\" />\n     "
+"<editbox ctype=\"Int\" evaluate=\"true\" name=\"bin_pt\" label=\"Binary point"
+"\" default=\"6\" />\n    </etch>\n   </tab>\n   <tab name=\"simtab\" label=\""
+"Advanced\" >\n    <etch label=\"Simulation\" >\n     <checkbox evaluate=\"tru"
+"e\" name=\"dbl_ovrd\" label=\"Override with doubles\" default=\"off\" />\n   "
+" </etch>\n   </tab>\n   <tab name=\"impltab\" label=\"Implementation\" >\n   "
+" <radiogroup ctype=\"Int\" evaluate=\"true\" name=\"optimize\" label=\"Optimi"
+"ze for\" default=\"Area\" >\n     <item value=\"Area\" label=\"Area\" />\n   "
+"  <item value=\"Speed\" label=\"Speed\" />\n    </radiogroup>\n    <etch labe"
+"l=\"Core Paramters\" >\n     <checkbox ctype=\"Int\" evaluate=\"true\" name="
+"\"use_rpm\" label=\"Use pre-defined core placement information\" default=\"on"
+"\" />\n    </etch>\n    <etch label=\"FPGA Area Estimation\" >\n     <checkbo"
+"x name=\"xl_use_area\" label=\"Define FPGA area for resource estimation\" def"
+"ault=\"off\" />\n     <editbox top_label=\"true\" name=\"xl_area\" label=\"FP"
+"GA area [slices, FFs, BRAMs, LUTs, IOBs, emb. mults, TBUFs]\" default=\"[0,0,"
+"0,0,0,0,0]\" />\n    </etch>\n   </tab>\n  </tabpane>\n  <workspacevar ctype="
+"\"Int\" name=\"bool\" />\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 65 65 0 ],[0 0 54 54 ],[0.77 0.82 0.91]);\npatch([18 9 22 9 1"
+"8 32 36 40 55 43 31 23 37 23 31 43 55 40 36 32 18 ],[6 15 28 41 50 50 46 50 5"
+"0 38 50 42 28 14 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0"
+" 54 54 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11p"
+"t}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsize"
+"{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	      sg_icon_stat	      "65,54,1,1,white,blue,0,3773fda5"
+	    }
+	  }
+	  SourceBlock		  "xrbsControl_r4/Moore State Machine"
+	  SourceType		  "Xilinx Moore State Machine"
+	  ShowPortLabels	  "on"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  next_state_matrix	  "[0 1; 1 2; 0 2]"
+	  output_matrix		  "[0; 1; 0]"
+	  n_bits		  "1"
+	  period		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Moore State Machine1"
+	  Ports			  [1, 2]
+	  Position		  [175, 363, 250, 427]
+	  LinkData {
+	    BlockName		    "Concat"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"concat\" s"
+"imulinkname=\"Concat\" >\n <initialization file=\"xlconcat_init.m\" />\n <ico"
+"n width=\"60\" bg_color=\"blue\" height=\"60\" wmark_color=\"white\" />\n <dl"
+"l entry_point=\"Concat_config\" name=\"Sysgen\" />\n <handlers enablement=\"x"
+"lmagicenablement\" />\n <libraries>\n  <library name=\"xbsIndex\" />\n  <libr"
+"ary name=\"xbsBasic\" />\n  <library name=\"xbsTypes\" />\n </libraries>\n <b"
+"lockgui label=\"Xilinx Bus Concatenator\" >\n  <editbox evaluate=\"false\" mu"
+"lti_line=\"true\" name=\"infoedit\" read_only=\"true\" default=\"Concatenates"
+" two or more inputs.  Output will be cast to an unsigned value with the binar"
+"y point at zero.\" />\n  <editbox ctype=\"Int\" evaluate=\"true\" name=\"num_"
+"inputs\" label=\"Number of inputs\" default=\"2\" />\n  <etch label=\"Simulat"
+"ion\" >\n   <checkbox evaluate=\"true\" name=\"dbl_ovrd\" label=\"Override wi"
+"th doubles\" default=\"off\" />\n  </etch>\n  <workspacevar ctype=\"String\" "
+"name=\"sysgen_root\" />\n  <workspacevar ctype=\"Int\" name=\"sim_engine\" />"
+"\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 40 40 0 ],[0 0 44 44 ],[0.77 0.82 0.91]);\npatch([10 3 12 3 1"
+"0 21 24 27 38 29 20 14 24 14 20 29 38 27 24 21 10 ],[6 13 22 31 38 38 35 38 3"
+"8 29 38 32 22 12 6 15 6 6 9 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 40 40 0 ],[0 "
+"44 44 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMME"
+"NT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11pt"
+"}\\bf500','texmode','on');\ncolor('black');port_label('input',2,'\\fontsize{1"
+"1pt}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsi"
+"ze{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    BlockName		    "Next State ROM"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"sprom\" si"
+"mulinkname=\"ROM\" >\n <icon width=\"60\" bg_color=\"blue\" height=\"56\" wma"
+"rk_color=\"white\" />\n <dll entry_point=\"SPROM_config\" name=\"Sysgen\" />"
+"\n <handlers enablement=\"spromenablement\" />\n <libraries>\n  <library name"
+"=\"xbsIndex\" />\n  <library name=\"xbsControl\" />\n  <library name=\"xbsMem"
+"ory\" />\n </libraries>\n <blockgui label=\"Xilinx Single Port Read-Only Memo"
+"ry\" >\n  <tabpane>\n   <tab name=\"basictab\" label=\"Basic\" >\n    <editbo"
+"x ctype=\"Int\" evaluate=\"true\" name=\"depth\" label=\"Depth\" default=\"16"
+"\" />\n    <editbox ctype=\"DoubleVector\" evaluate=\"true\" name=\"initVecto"
+"r\" label=\"Initial value vector\" default=\"sin(pi*(0:15)/16)\" />\n    <rad"
+"iogroup ctype=\"Int\" evaluate=\"true\" name=\"distributed_mem\" label=\"Memo"
+"ry Type\" default=\"Block RAM\" >\n     <item value=\"Distributed memory\" la"
+"bel=\"Distributed memory\" />\n     <item value=\"Block RAM\" label=\"Block R"
+"AM\" />\n    </radiogroup>\n    <etch label=\"Optional Ports\" >\n     <check"
+"box ctype=\"Int\" evaluate=\"true\" name=\"rst\" label=\"Provide reset port f"
+"or output register\" default=\"off\" />\n     <editbox ctype=\"Double\" evalu"
+"ate=\"true\" name=\"init_reg\" label=\"Initial value for output register\" de"
+"fault=\"0\" />\n     <checkbox ctype=\"Int\" evaluate=\"true\" name=\"en\" la"
+"bel=\"Provide enable port\" default=\"off\" />\n    </etch>\n    <editbox cty"
+"pe=\"Int\" evaluate=\"true\" name=\"latency\" label=\"Latency\" default=\"1\""
+" />\n   </tab>\n   <tab name=\"typetab\" label=\"Output Type\" >\n    <etch l"
+"abel=\"Output Precision\" >\n     <radiogroup ctype=\"Int\" evaluate=\"true\""
+" name=\"arith_type\" label=\"Word type\" default=\"Signed  (2's comp)\" >\n  "
+"    <item value=\"Boolean\" label=\"Boolean\" />\n      <item value=\"Unsigne"
+"d\" label=\"Unsigned\" />\n      <item value=\"Signed  (2's comp)\" label=\"S"
+"igned  (2's comp)\" />\n     </radiogroup>\n     <editbox ctype=\"Int\" evalu"
+"ate=\"true\" name=\"n_bits\" label=\"Number of bits\" default=\"8\" />\n     "
+"<editbox ctype=\"Int\" evaluate=\"true\" name=\"bin_pt\" label=\"Binary point"
+"\" default=\"6\" />\n    </etch>\n   </tab>\n   <tab name=\"simtab\" label=\""
+"Advanced\" >\n    <etch label=\"Simulation\" >\n     <checkbox evaluate=\"tru"
+"e\" name=\"dbl_ovrd\" label=\"Override with doubles\" default=\"off\" />\n   "
+" </etch>\n   </tab>\n   <tab name=\"impltab\" label=\"Implementation\" >\n   "
+" <radiogroup ctype=\"Int\" evaluate=\"true\" name=\"optimize\" label=\"Optimi"
+"ze for\" default=\"Area\" >\n     <item value=\"Area\" label=\"Area\" />\n   "
+"  <item value=\"Speed\" label=\"Speed\" />\n    </radiogroup>\n    <etch labe"
+"l=\"Core Paramters\" >\n     <checkbox ctype=\"Int\" evaluate=\"true\" name="
+"\"use_rpm\" label=\"Use pre-defined core placement information\" default=\"on"
+"\" />\n    </etch>\n    <etch label=\"FPGA Area Estimation\" >\n     <checkbo"
+"x name=\"xl_use_area\" label=\"Define FPGA area for resource estimation\" def"
+"ault=\"off\" />\n     <editbox top_label=\"true\" name=\"xl_area\" label=\"FP"
+"GA area [slices, FFs, BRAMs, LUTs, IOBs, emb. mults, TBUFs]\" default=\"[0,0,"
+"0,0,0,0,0]\" />\n    </etch>\n   </tab>\n  </tabpane>\n  <workspacevar ctype="
+"\"Int\" name=\"bool\" />\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 65 65 0 ],[0 0 54 54 ],[0.77 0.82 0.91]);\npatch([18 9 22 9 1"
+"8 32 36 40 55 43 31 23 37 23 31 43 55 40 36 32 18 ],[6 15 28 41 50 50 46 50 5"
+"0 38 50 42 28 14 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0"
+" 54 54 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11p"
+"t}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsize"
+"{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	    BlockName		    "Output ROM"
+	    DialogParameters {
+	      sg_blockgui_xml	      "<!--   *  Copyright (c) 2005, Xilinx, I"
+"nc.  All Rights Reserved.           --><!--   *  Reproduction or reuse, in an"
+"y form, without the explicit written --><!--   *  consent of Xilinx, Inc., is"
+" strictly prohibited.                 --><sysgenblock block_type=\"sprom\" si"
+"mulinkname=\"ROM\" >\n <icon width=\"60\" bg_color=\"blue\" height=\"56\" wma"
+"rk_color=\"white\" />\n <dll entry_point=\"SPROM_config\" name=\"Sysgen\" />"
+"\n <handlers enablement=\"spromenablement\" />\n <libraries>\n  <library name"
+"=\"xbsIndex\" />\n  <library name=\"xbsControl\" />\n  <library name=\"xbsMem"
+"ory\" />\n </libraries>\n <blockgui label=\"Xilinx Single Port Read-Only Memo"
+"ry\" >\n  <tabpane>\n   <tab name=\"basictab\" label=\"Basic\" >\n    <editbo"
+"x ctype=\"Int\" evaluate=\"true\" name=\"depth\" label=\"Depth\" default=\"16"
+"\" />\n    <editbox ctype=\"DoubleVector\" evaluate=\"true\" name=\"initVecto"
+"r\" label=\"Initial value vector\" default=\"sin(pi*(0:15)/16)\" />\n    <rad"
+"iogroup ctype=\"Int\" evaluate=\"true\" name=\"distributed_mem\" label=\"Memo"
+"ry Type\" default=\"Block RAM\" >\n     <item value=\"Distributed memory\" la"
+"bel=\"Distributed memory\" />\n     <item value=\"Block RAM\" label=\"Block R"
+"AM\" />\n    </radiogroup>\n    <etch label=\"Optional Ports\" >\n     <check"
+"box ctype=\"Int\" evaluate=\"true\" name=\"rst\" label=\"Provide reset port f"
+"or output register\" default=\"off\" />\n     <editbox ctype=\"Double\" evalu"
+"ate=\"true\" name=\"init_reg\" label=\"Initial value for output register\" de"
+"fault=\"0\" />\n     <checkbox ctype=\"Int\" evaluate=\"true\" name=\"en\" la"
+"bel=\"Provide enable port\" default=\"off\" />\n    </etch>\n    <editbox cty"
+"pe=\"Int\" evaluate=\"true\" name=\"latency\" label=\"Latency\" default=\"1\""
+" />\n   </tab>\n   <tab name=\"typetab\" label=\"Output Type\" >\n    <etch l"
+"abel=\"Output Precision\" >\n     <radiogroup ctype=\"Int\" evaluate=\"true\""
+" name=\"arith_type\" label=\"Word type\" default=\"Signed  (2's comp)\" >\n  "
+"    <item value=\"Boolean\" label=\"Boolean\" />\n      <item value=\"Unsigne"
+"d\" label=\"Unsigned\" />\n      <item value=\"Signed  (2's comp)\" label=\"S"
+"igned  (2's comp)\" />\n     </radiogroup>\n     <editbox ctype=\"Int\" evalu"
+"ate=\"true\" name=\"n_bits\" label=\"Number of bits\" default=\"8\" />\n     "
+"<editbox ctype=\"Int\" evaluate=\"true\" name=\"bin_pt\" label=\"Binary point"
+"\" default=\"6\" />\n    </etch>\n   </tab>\n   <tab name=\"simtab\" label=\""
+"Advanced\" >\n    <etch label=\"Simulation\" >\n     <checkbox evaluate=\"tru"
+"e\" name=\"dbl_ovrd\" label=\"Override with doubles\" default=\"off\" />\n   "
+" </etch>\n   </tab>\n   <tab name=\"impltab\" label=\"Implementation\" >\n   "
+" <radiogroup ctype=\"Int\" evaluate=\"true\" name=\"optimize\" label=\"Optimi"
+"ze for\" default=\"Area\" >\n     <item value=\"Area\" label=\"Area\" />\n   "
+"  <item value=\"Speed\" label=\"Speed\" />\n    </radiogroup>\n    <etch labe"
+"l=\"Core Paramters\" >\n     <checkbox ctype=\"Int\" evaluate=\"true\" name="
+"\"use_rpm\" label=\"Use pre-defined core placement information\" default=\"on"
+"\" />\n    </etch>\n    <etch label=\"FPGA Area Estimation\" >\n     <checkbo"
+"x name=\"xl_use_area\" label=\"Define FPGA area for resource estimation\" def"
+"ault=\"off\" />\n     <editbox top_label=\"true\" name=\"xl_area\" label=\"FP"
+"GA area [slices, FFs, BRAMs, LUTs, IOBs, emb. mults, TBUFs]\" default=\"[0,0,"
+"0,0,0,0,0]\" />\n    </etch>\n   </tab>\n  </tabpane>\n  <workspacevar ctype="
+"\"Int\" name=\"bool\" />\n </blockgui>\n</sysgenblock>\n"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphic"
+"s ');\npatch([0 65 65 0 ],[0 0 54 54 ],[0.77 0.82 0.91]);\npatch([18 9 22 9 1"
+"8 32 36 40 55 43 31 23 37 23 31 43 55 40 36 32 18 ],[6 15 28 41 50 50 46 50 5"
+"0 38 50 42 28 14 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0"
+" 54 54 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\n\nfprintf('','COMM"
+"ENT: begin icon text ');\ncolor('black');port_label('input',1,'\\fontsize{11p"
+"t}\\bf500','texmode','on');\ncolor('black');port_label('output',1,'\\fontsize"
+"{11pt}\\bf500','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	    }
+	  }
+	  SourceBlock		  "xrbsControl_r4/Moore State Machine"
+	  SourceType		  "Xilinx Moore State Machine"
+	  ShowPortLabels	  "on"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  next_state_matrix	  "[0 1; 1 2; 0 2]"
+	  output_matrix		  "[0; 1; 0]"
+	  n_bits		  "1"
+	  period		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ROM1"
+	  Ports			  [1, 1]
+	  Position		  [675, 239, 725, 291]
+	  SourceBlock		  "xbsIndex_r4/ROM"
+	  SourceType		  "Xilinx Single Port Read-Only Memory Block"
+	  depth			  "16"
+	  initVector		  "(0.05:(0.95-0.05)/15:0.95)"
+	  distributed_mem	  "Block RAM"
+	  rst			  "off"
+	  init_reg		  "0"
+	  en			  "off"
+	  latency		  "1"
+	  arith_type		  "Signed  (2's comp)"
+	  n_bits		  "16"
+	  bin_pt		  "14"
+	  dbl_ovrd		  "off"
+	  optimize		  "Area"
+	  use_rpm		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0 0 1 0 0 0 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "sprom"
+	  block_version		  "8.2.02"
+	  sg_icon_stat		  "50,52,1,1,white,blue,0,a8b86474"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');"
+"\npatch([0 50 50 0 ],[0 0 52 52 ],[0.77 0.82 0.91]);\npatch([11 3 15 3 11 24 "
+"28 32 46 35 24 16 28 16 24 35 46 32 28 24 11 ],[6 14 26 38 46 46 42 46 46 35 "
+"46 38 26 14 6 17 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 50 50 0 ],[0 52 5"
+"2 0 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: be"
+"gin icon text');\ncolor('black');port_label('input',1,'addr');\ncolor('black'"
+");disp('z^{-1}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "warn period Convert0"
+	  Ports			  []
+	  Position		  [307, 220, 333, 245]
+	  ShowName		  off
+	  SourceBlock		  "xbsReplacements_r4/Warning"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "on"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  period		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "warn period ROM10"
+	  Ports			  []
+	  Position		  [657, 214, 683, 239]
+	  ShowName		  off
+	  SourceBlock		  "xbsReplacements_r4/Warning"
+	  SourceType		  "Unknown"
+	  ShowPortLabels	  "on"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  period		  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  Position		  [765, 258, 795, 272]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Counter_Out"
+	  Position		  [695, 178, 725, 192]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Counter1"
+	  SrcPort		  1
+	  Points		  [0, -10; 35, 0]
+	  Branch {
+	    DstBlock		    "ROM1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "Counter_Out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Moore State Machine"
+	  SrcPort		  2
+	  DstBlock		  "Convert"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "up"
+	  SrcPort		  1
+	  DstBlock		  "Moore State Machine"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ROM1"
+	  SrcPort		  1
+	  DstBlock		  "Out2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Convert"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    DstBlock		    "Counter1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 120]
+	    DstBlock		    "Logical"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "down"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Moore State Machine1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Moore State Machine1"
+	  SrcPort		  2
+	  DstBlock		  "Convert1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Logical"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -110]
+	  DstBlock		  "Counter1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Convert1"
+	  SrcPort		  1
+	  DstBlock		  "Logical"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "K_DOWN"
+      Ports		      [1, 1]
+      Position		      [90, 129, 155, 151]
+      SourceBlock	      "xbsIndex_r4/Gateway In"
+      SourceType	      "Xilinx Gateway In Block"
+      infoedit		      "Gateway in block.  Converts inputs of type Simu"
+"link integer, double and fixed point to  Xilinx fixed point type.<P><P>Hardwa"
+"re notes:  In hardware these blocks become top level input ports."
+      arith_type	      "Boolean"
+      n_bits		      "16"
+      bin_pt		      "14"
+      quantization	      "Round  (unbiased: +/- Inf)"
+      overflow		      "Saturate"
+      period		      "Tsysclk*500"
+      dbl_ovrd		      off
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0 0 0 0 16 0 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "755,241,356,432"
+      block_type	      "gatewayin"
+      block_version	      "VER_STRING_GOES_HERE"
+      sg_icon_stat	      "65,22,1,1,white,yellow,0,4bb76ffd"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\npatch([27 24 29 24 27 32 33"
+" 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 "
+"15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0 20 20 0 0 "
+"]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin ic"
+"on text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','t"
+"exmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMME"
+"NT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "K_LEDS_OUT"
+      Ports		      [1, 1]
+      Position		      [400, 129, 465, 151]
+      SourceBlock	      "xbsIndex_r4/Gateway Out"
+      SourceType	      "Xilinx Gateway Out Block"
+      infoedit		      "Gateway out block.  Converts Xilinx fixed point"
+" inputs into ouputs of type Simulink integer, double, or fixed point.<P><P>Ha"
+"rdware notes:  In hardware these blocks become top level output ports or are "
+"discarded, depending on how they are configured."
+      hdl_port		      on
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0 0 0 0 16 0 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,356,335"
+      block_type	      "gatewayout"
+      block_version	      "VER_STRING_GOES_HERE"
+      sg_icon_stat	      "65,22,1,1,white,yellow,0,f0cec300"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 60 60 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\npatch([24 21 26 21 24 29 30"
+" 31 37 33 29 26 31 26 29 33 37 31 30 29 24 ],[2 5 10 15 18 18 17 18 18 14 18 "
+"15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 60 60 0 ],[0 20 20 0 0 "
+"]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin ic"
+"on text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_la"
+"bel('output',1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMM"
+"ENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "K_UP"
+      Ports		      [1, 1]
+      Position		      [90, 89, 155, 111]
+      SourceBlock	      "xbsIndex_r4/Gateway In"
+      SourceType	      "Xilinx Gateway In Block"
+      infoedit		      "Gateway in block.  Converts inputs of type Simu"
+"link integer, double and fixed point to  Xilinx fixed point type.<P><P>Hardwa"
+"re notes:  In hardware these blocks become top level input ports."
+      arith_type	      "Boolean"
+      n_bits		      "16"
+      bin_pt		      "14"
+      quantization	      "Round  (unbiased: +/- Inf)"
+      overflow		      "Saturate"
+      period		      "Tsysclk*500"
+      dbl_ovrd		      off
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0 0 0 0 16 0 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "755,241,356,432"
+      block_type	      "gatewayin"
+      block_version	      "VER_STRING_GOES_HERE"
+      sg_icon_stat	      "65,22,1,1,white,yellow,0,4bb76ffd"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\npatch([27 24 29 24 27 32 33"
+" 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 "
+"15 10 5 2 6 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 0 65 65 0 ],[0 20 20 0 0 "
+"]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin ic"
+"on text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','t"
+"exmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMME"
+"NT: end icon text');\n"
+    }
+    Line {
+      SrcBlock		      "K_UP"
+      SrcPort		      1
+      Points		      [50, 0]
+      DstBlock		      "K"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "K"
+      SrcPort		      2
+      DstBlock		      "K_LEDS_OUT"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "K_DOWN"
+      SrcPort		      1
+      Points		      [50, 0]
+      DstBlock		      "K"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "K"
+      SrcPort		      1
+      Points		      [85, 0]
+    }
+  }
+}

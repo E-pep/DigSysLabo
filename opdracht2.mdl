@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.15"
+    ComputedModelVersion    "1.17"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -44,8 +44,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Mar 04 16:52:33 2019"
-  ModelVersionFormat	  "1.%<AutoIncrement:15>"
+  LastModifiedDate	  "Mon Mar 11 16:47:25 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:17>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -636,7 +636,7 @@ Model {
   }
   System {
     Name		    "opdracht2"
-    Location		    [180, 396, 1840, 1311]
+    Location		    [885, 856, 2545, 1771]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -879,7 +879,7 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       low		      "0"
-      gain		      "1"
+      gain		      "0.8"
       high		      "1"
     }
     Block {
