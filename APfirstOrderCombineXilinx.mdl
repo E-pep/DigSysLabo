@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.30"
+    ComputedModelVersion    "1.35"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -44,8 +44,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Mar 11 16:47:28 2019"
-  ModelVersionFormat	  "1.%<AutoIncrement:30>"
+  LastModifiedDate	  "Wed Mar 13 14:18:52 2019"
+  ModelVersionFormat	  "1.%<AutoIncrement:35>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -609,7 +609,7 @@ Model {
   }
   System {
     Name		    "APfirstOrderCombineXilinx"
-    Location		    [180, 104, 1646, 890]
+    Location		    [179, 148, 1645, 990]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -823,6 +823,91 @@ Model {
 "icon text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_"
 "label('input',2,'b');\ncolor('black');port_label('output',1,'\\bf{a - b}','te"
 "xmode','on');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Delay"
+      Ports		      [1, 1]
+      Position		      [305, 637, 365, 693]
+      SourceBlock	      "xbsIndex_r4/Delay"
+      SourceType	      "Xilinx Delay Block"
+      infoedit		      "Hardware notes: A delay line is a chain, each l"
+"ink of which is an SRL16 followed by a flip-flop."
+      en		      off
+      latency		      "11"
+      dbl_ovrd		      off
+      reg_retiming	      off
+      xl_use_area	      off
+      xl_area		      "[0,0,0,0,0,0,0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,356,237"
+      block_type	      "delay"
+      block_version	      "9.2.00"
+      sg_icon_stat	      "60,56,1,1,white,blue,0,36c42516"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15 30 34 3"
+"8 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50 37 49 4"
+"0 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 60 60 0 ],[0 56 56 0 "
+"0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin "
+"icon text');\ncolor('black');disp('z^{-11}','texmode','on');\nfprintf('','COM"
+"MENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Delay1"
+      Ports		      [1, 1]
+      Position		      [290, 77, 350, 133]
+      SourceBlock	      "xbsIndex_r4/Delay"
+      SourceType	      "Xilinx Delay Block"
+      infoedit		      "Hardware notes: A delay line is a chain, each l"
+"ink of which is an SRL16 followed by a flip-flop."
+      en		      off
+      latency		      "11"
+      dbl_ovrd		      off
+      reg_retiming	      off
+      xl_use_area	      off
+      xl_area		      "[0,0,0,0,0,0,0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,356,237"
+      block_type	      "delay"
+      block_version	      "9.2.00"
+      sg_icon_stat	      "60,56,1,1,white,blue,0,36c42516"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15 30 34 3"
+"8 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50 37 49 4"
+"0 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 60 60 0 ],[0 56 56 0 "
+"0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin "
+"icon text');\ncolor('black');disp('z^{-11}','texmode','on');\nfprintf('','COM"
+"MENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Delay2"
+      Ports		      [1, 1]
+      Position		      [382, 135, 438, 195]
+      Orientation	      "up"
+      SourceBlock	      "xbsIndex_r4/Delay"
+      SourceType	      "Xilinx Delay Block"
+      infoedit		      "Hardware notes: A delay line is a chain, each l"
+"ink of which is an SRL16 followed by a flip-flop."
+      en		      off
+      latency		      "3"
+      dbl_ovrd		      off
+      reg_retiming	      off
+      xl_use_area	      off
+      xl_area		      "[0,0,0,0,0,0,0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,356,237"
+      block_type	      "delay"
+      block_version	      "9.2.00"
+      sg_icon_stat	      "60,56,1,1,white,blue,0,eabd56db"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
+"tch([0 60 60 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([15 6 19 6 15 30 34 3"
+"8 54 41 29 20 32 20 29 41 54 38 34 30 15 ],[6 15 28 41 50 50 46 50 50 37 49 4"
+"0 28 16 7 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 0 60 60 0 ],[0 56 56 0 "
+"0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin "
+"icon text');\ncolor('black');disp('z^{-3}','texmode','on');\nfprintf('','COMM"
+"ENT: end icon text');\n"
     }
     Block {
       BlockType		      Display
@@ -1056,7 +1141,7 @@ Model {
       BlockType		      Reference
       Name		      "Gateway In5"
       Ports		      [1, 1]
-      Position		      [545, 260, 565, 325]
+      Position		      [520, 265, 540, 330]
       Orientation	      "down"
       NamePlacement	      "alternate"
       SourceBlock	      "xbsIndex_r4/Gateway In"
@@ -1248,7 +1333,7 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       low		      "0"
-      gain		      "0.5023"
+      gain		      "0.5"
       high		      "1"
     }
     Block {
@@ -1268,7 +1353,7 @@ Model {
       quantization	      "Truncate"
       overflow		      "Wrap"
       en		      off
-      latency		      "8"
+      latency		      "5"
       dbl_ovrd		      off
       use_behavioral_HDL      off
       use_embedded	      on
@@ -1283,7 +1368,7 @@ Model {
       sggui_pos		      "20,20,356,451"
       block_type	      "mult"
       block_version	      "9.2.00"
-      sg_icon_stat	      "55,55,2,1,white,blue,0,0adf5074"
+      sg_icon_stat	      "55,55,2,1,white,blue,0,77d3bc5f"
       sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npa"
 "tch([0 55 55 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([13 4 17 4 13 28 32 3"
 "6 52 40 28 19 32 19 28 40 52 36 32 28 13 ],[6 15 28 41 50 50 46 50 50 38 50 4"
@@ -1291,7 +1376,7 @@ Model {
 "0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin "
 "icon text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_"
 "label('input',2,'b');\ncolor('black');port_label('output',1,'(ab)');\ncolor('"
-"black');disp('\\newline\\bf{}\\newlinez^{-8}','texmode','on');\nfprintf('','C"
+"black');disp('\\newline\\bf{}\\newlinez^{-5}','texmode','on');\nfprintf('','C"
 "OMMENT: end icon text');\n"
     }
     Block {
@@ -1325,7 +1410,7 @@ Model {
       use_rpm		      "on"
       placement_style	      "Triangular"
       has_advanced_control    "0"
-      sggui_pos		      "-1,-1,-1,-1"
+      sggui_pos		      "20,20,356,451"
       block_type	      "mult"
       block_version	      "9.2.00"
       sg_icon_stat	      "55,55,2,1,white,blue,0,9c0d74db"
@@ -1343,7 +1428,7 @@ Model {
       BlockType		      Reference
       Name		      "Mult2"
       Ports		      [2, 1]
-      Position		      [990, 610, 1045, 665]
+      Position		      [955, 610, 1010, 665]
       SourceBlock	      "xbsIndex_r4/Mult"
       SourceType	      "Xilinx Multiplier Block"
       infoedit		      "Hardware notes: To use the internal pipeline st"
@@ -1996,7 +2081,7 @@ Model {
       BlockType		      Reference
       Name		      "alfa"
       Ports		      [1, 1]
-      Position		      [205, 155, 235, 185]
+      Position		      [185, 195, 215, 225]
       SourceBlock	      "simulink/Math\nOperations/Slider\nGain"
       SourceType	      "Slider Gain"
       ShowPortLabels	      "FromPortIcon"
@@ -2014,7 +2099,9 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "c1"
-      Position		      [205, 100, 235, 130]
+      Position		      [185, 110, 215, 140]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
     }
     Block {
       BlockType		      Constant
@@ -2036,8 +2123,8 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "c5"
-      Position		      [510, 210, 540, 240]
-      Value		      "0.5"
+      Position		      [470, 220, 500, 250]
+      Value		      "-1"
     }
     Block {
       BlockType		      Constant
@@ -2054,7 +2141,7 @@ Model {
 	DstPort			1
       }
       Branch {
-	Points			[0, -40; 1220, 0]
+	Points			[0, -45; 1220, 0]
 	DstBlock		"Integer Delay"
 	DstPort			1
       }
@@ -2062,14 +2149,13 @@ Model {
     Line {
       SrcBlock		      "c1"
       SrcPort		      1
-      Points		      [0, 55]
+      Points		      [-10, 0]
       DstBlock		      "alfa"
       DstPort		      1
     }
     Line {
       SrcBlock		      "alfa"
       SrcPort		      1
-      Points		      [-20, 0]
       DstBlock		      "Gateway In1"
       DstPort		      1
     }
@@ -2104,21 +2190,22 @@ Model {
     Line {
       SrcBlock		      "Subsystem"
       SrcPort		      1
-      Points		      [35, 0]
+      Points		      [5, 0]
       Branch {
-	Points			[0, -135]
-	DstBlock		"AddSub"
-	DstPort			2
+	Points			[30, 0]
+	DstBlock		"Mult1"
+	DstPort			1
       }
       Branch {
-	DstBlock		"Mult1"
+	Points			[5, 0]
+	DstBlock		"Delay2"
 	DstPort			1
       }
     }
     Line {
       SrcBlock		      "c3"
       SrcPort		      1
-      Points		      [0, 30; 40, 0]
+      Points		      [0, 10; 40, 0]
       DstBlock		      "K"
       DstPort		      1
     }
@@ -2205,21 +2292,21 @@ Model {
     Line {
       SrcBlock		      "Mult"
       SrcPort		      1
-      Points		      [25, 0; 0, 145]
+      Points		      [35, 0; 0, 145]
       DstBlock		      "AddSub1"
       DstPort		      1
     }
     Line {
       SrcBlock		      "c5"
       SrcPort		      1
-      Points		      [10, 0]
+      Points		      [25, 0]
       DstBlock		      "Gateway In5"
       DstPort		      1
     }
     Line {
       SrcBlock		      "Gateway In5"
       SrcPort		      1
-      Points		      [0, 10; -95, 0]
+      Points		      [0, 5; -70, 0]
       DstBlock		      "Mult1"
       DstPort		      2
     }
@@ -2310,20 +2397,23 @@ Model {
     Line {
       SrcBlock		      "Up Sample"
       SrcPort		      1
-      Points		      [10, 0; 0, -5]
+      Points		      [5, 0]
       Branch {
-	Points			[0, -165]
-	DstBlock		"AddSub"
+	Points			[5, 0; 0, -5]
+	Branch {
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 410]
+	  DstBlock		  "Delay"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, -155]
+	DstBlock		"Delay1"
 	DstPort			1
-      }
-      Branch {
-	DstBlock		"Subsystem"
-	DstPort			2
-      }
-      Branch {
-	Points			[0, 410]
-	DstBlock		"AddSub2"
-	DstPort			2
       }
     }
     Line {
@@ -2349,7 +2439,7 @@ Model {
     Line {
       SrcBlock		      "Mult2"
       SrcPort		      1
-      Points		      [0, -345; -45, 0]
+      Points		      [15, 0; 0, -345; -25, 0]
       DstBlock		      "AddSub1"
       DstPort		      2
     }
@@ -2366,6 +2456,26 @@ Model {
       Points		      [0, 75]
       DstBlock		      "Spectrum\nAnalyzer"
       DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Delay"
+      SrcPort		      1
+      DstBlock		      "AddSub2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Delay1"
+      SrcPort		      1
+      Points		      [55, 0; 0, -15]
+      DstBlock		      "AddSub"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Delay2"
+      SrcPort		      1
+      Points		      [0, -10]
+      DstBlock		      "AddSub"
+      DstPort		      2
     }
   }
 }
